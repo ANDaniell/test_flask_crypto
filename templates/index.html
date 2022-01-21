@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css', v=1)}}">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>BiFinex</title>
+</head>
+<body>
+   
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light "style="background-color: #102331;">
+        <div class="container-fluid" >           
+                <a class="navbar-brand" href="#">
+                  <img src="img/bitfinex-logo.svg" alt="" width="210" height="26">
+                </a>             
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+              
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">For Traders</a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdown" >
+                    <li><a class="dropdown-item" href="market.html">Market statistics</a></li>
+                    <li><a class="dropdown-item" href="corporate.html">Corporate & Professional</a></li>
+                    <li><a class="dropdown-item" href="fees.html">Our Fees </a></li>
+                    <li><a class="dropdown-item" href="security.html">Security</a></li>
+                    <li><a class="dropdown-item" href="">Reporting Tool</a></li>
+                  </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">For Lenders</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Staking</a></li>
+                    <li><a class="dropdown-item" href="#">Lending Pro</a></li>
+                    <li><a class="dropdown-item" href="#">Lending Products</a></li>
+                  </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About Us</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="about.html">About BiFinix</a></li>
+                    <li><a class="dropdown-item" href="#">Blog</a></li>
+                    <li><a class="dropdown-item" href="#">Press</a></li>
+                  </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Affiliate Program</a>
+            </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
+              
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sing-up.html" style="color:#09895b; font-weight:600;">Sing Up</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">English</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Ru</a></li>
+                        <li><a class="dropdown-item" href="#">De</a></li>
+                        <li><a class="dropdown-item" href="#">Fr</a></li>
+                      </ul>
+                </li>
+                </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center text-white" style="font-size: 53px;">The home of digital 
+                        <h1 class="text-center text-white" style="font-size: 53px;" > asset trading</h1></h1>
+                    <div class="ida">
+                    <a href="" class="btn btn-itd btn-lg itd">Sing Up</a>
+                    <a href="" class="btn btn-itd btn-lg itd2 ">Login</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+             <!-- Cryptocurrency Price Widget --><script>!function(){var e=document.getElementsByTagName("script"),t=e[e.length-1],n=document.createElement("script");function r(){var e=crCryptocoinPriceWidget.init({base:"USD,EUR,CNY,GBP",items:"BTC,ETH,LTC,LUNA,SOL,DOGE,TRX,ADA,BTCD,CRAIG,XBS,XPY,PRC,CETI,DT",backgroundColor:"102331",streaming:"1",rounded:"1",boxShadow:"1",border:"1"});t.parentNode.insertBefore(e,t)}n.src="https://co-in.io/widget/pricelist.js?items=BTC%2CETH%2CLTC%2CLUNA%2CSOL%2CDOGE%2CTRX%2CADA%2CBTCD%2CCRAIG%2CXBS%2CXPY%2CPRC%2CCETI%2CDT",n.async=!0,n.readyState?n.onreadystatechange=function(){"loaded"!=n.readyState&&"complete"!=n.readyState||(n.onreadystatechange=null,r())}:n.onload=function(){r()},t.parentNode.insertBefore(n,null)}();</script><!-- /Cryptocurrency Price Widget -->
+            </div> </div>
+       
+</header>
+
+    <section class="secone">
+        <div class="container seconn">
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="text-left" style="color:#01a781; font-size:14px ; font-weight: 600;"> FEATURES </h6>
+                    <h2 class="text-left" style="color:#01a781; font-size: 50px;"> World class trading </h2>
+                    <h2 class="text-left mb-5" style="color:#01a781; font-size: 50px;">platform </h2>
+                </div>
+            </div>
+            <div class="row rofls">
+                <div class="col-xl-2 col-md-3 col-sm-6" >
+                    <div class="pict"><img src="img/icon-exchange.png"  width="" height="50"></div>
+               </div>
+                <div class="col-xl-2 col-md-3 col-sm-6 mb-5">                   
+                    <h6><p class="pzx"> Exchange</p>
+                        Bitfinex offers order books with top tier liquidity, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.
+                    </h6> </div>
+                <div class="col-xl-2 col-md-3 col-sm-6">
+                      <div class="pict"><img src="img/icon-margin_funding.png" alt="" width="110" height="16"></div></div>
+                <div class="col-xl-2 col-md-3 col-sm-6 mb-5">                  
+                    <h6><p class="pzx">Margin funding</p>
+                        Liquidity providers can generate yield by providing funding to traders wanting to trade with leverage. Funding is traded on an order book at various rates and periods.
+                    </h6> </div>
+
+                <div class="col-xl-2 col-md-3 col-sm-6">
+                    <div class="pict"><img src="img/icon-margin_trading.png" alt="" width="110" height="16"></div></div>
+                <div class="col-xl-2 col-md-3 col-sm-6 mb-5">
+                    <h6>
+                            <p class="pzx">Margin trading</p>
+                Bitfinex allows up to 10x leverage trading by providing traders with access to the peer-to-peer funding market.
+                    </h6></div>
+                
+                <div class="col-xl-2 col-md-3 col-sm-6 ">
+                    <div class="pict"><img src="img/icon-order_type.png
+                        " alt="" width="110" height="16"></div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-sm-6 mb-5">                    
+                    <h6><p class="pzx">Order types</p>
+                        Bitfinex offers a suite of order types to give traders the tools they need for every scenario. Discover more about our most advanced Algorithmic orders types.
+                    </h6></div>
+
+                <div class="col-xl-2 col-md-3 col-sm-6"> 
+                    <div class="pict"><img src="img/icon-customizable_interface.png" alt="" width="110" height="16"></div></div>
+                <div class="col-xl-2 col-md-3 col-sm-6 mb-5">
+                    
+                    <h6><p class="pzx">Customizable interface</p>
+                        Organize your workspace according to your needs: compose your layout, choose between themes, and set up notifications.
+                    </h6></div>
+                <div class="col-xl-2 col-md-3 col-sm-6">
+                    <div class="pict"><img src="img/icon-security.png" alt="" width="110" height="16"></div></div>
+
+                <div class="col-xl-2 col-md-3 col-sm-6 mb-5">
+                    
+                    <h6><p class="pzx">Security</p>
+                        Security of user information and funds is our first priority. Learn more about our security features and integrations.
+                    </h6></div>
+            </div>
+             <h2 class="text-left mb-2 mt-3" style=" font-size: 16px; font-weight: 100;"><a class="nav-link" href="#" style="color:#01a781;"> > Read more about our features</a> </h2>
+        </div>
+    </section>
+
+    <section class="sectwo">
+        <div class="container sectwo">
+            <div class="row">
+               <h6 class="mb-3" style="color: #01c095 ; font-size: 12px;"> ADVANCED FEATURES FOR PROFESSIONALS </h6>
+               <h1 class="mb-5"style="color: #01c095; font-size: 50px; font-weight: 100;">To meet the highest of demands</h1> 
+               <div class="row rofls2 mt-4">           
+                <div class="col-xl-6 col-md-6 col-sm-12 mb-5">                   
+                    <h6><p class="pzx">Corporate account and professional trading</p>
+                        Bitfinex has a bespoke offering expertly tailored to meet the specific needs of professional and institutional traders including sub-accounts, expedited verification, and dedicated customer support.
+                    </h6> <a class="link"  href=""> > Read more about our features</a></div>
+                <div class="col-xl-6 col-md-6 col-sm-12 mb-5">                   
+                    <h6><p class="pzx"> Advanced chart tools</p>
+                        Bitfinex facilitates a graphical trading experience with advanced charting functionality that allows traders to visualise orders, positions and price alerts, tap to modify order properties, and annotate to their trading strategy.
+                    </h6> <a class="link"  href=""> > View our demo </a> </div>
+                <div class="col-xl-6 col-md-6 col-sm-12 mb-5">                   
+                    <h6 class=""><p class="pzx"> Professional connectivity</p>
+                        Partnering with Market Synergy, corporate accounts and professional traders can take advantage of the fastest trading speeds through institutional-grade connectivity and co-location services with direct access to our digital asset gateway.
+                    </h6> <a class="link" href=""> > Read more about our features </a></div>
+                <div class="col-xl-6 col-md-6 col-sm-12 mb-5">                   
+                    <h6 class="mb-4"><p class="pzx"> API</p>
+                        The Bitfinex REST and Websocket APIs are designed to facilitate access to all features of the Bitfinex platform, allowing full integration with traders’ own products and platforms. 
+                    </h6><a class="link"  href=""> > View our API </a> </div>
+
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secthree">
+        <div class="container secthree">
+            <div class="row">
+             <h6 class="text-left" style="font-size: 12px; font-weight: 700;"> NEWS</h6>
+             <h6 class="text-left mb-5" style="font-size: 50px;"> Explore our news</h6>
+            </div>
+
+            <div class="row roflszxc mt-5">
+                <div class="col-xl-6 col-md-12 col-sm-12 mb-5 "> 
+                    <div class="pict"><img src="img/Changelog_v1.32-1-1-539x303.png" alt="" width="100%" height="100%"></div>
+                </div>
+                <div class="col-xl-6 col-md-12 col-sm-12 mb-5 tt"> 
+                    <h1 class="">Change Log: Version 1.35</h6>
+                    <h5 class="mb-5"> Dec 31 2021</h1>
+                    <h1 class="">Honey Framework 3.24 and Honey 1.02</h6>
+                    <h5 class="mb-5"> Dec 23 2021</h1>
+                    <h1 class="">Bitfinex Pay Release V1.2</h6>
+                    <h5 class="mb-5"> Dec 21 2021</h1>
+                 </div>
+            </div>
+            <div class="col-xl-6 col-md-12 col-sm-12 mb-3 ttz"> 
+            <h3 class="text-left " style="font-size: 16px;"> The Bitfinex Change Log is an overview of all performance and UI changes made to the Bitfinex trading platform. For an overview of all previous changes, please refer to blog.bitfinex.com/category/changelogs. Version 1.35 Features New fiat equivalents in the balances widget Confirmation dialog when the withdrawal…
+           </h3>
+           </div>
+           <h4 class="text-left mb-5" style="font-size: 16px; color: #01c095"> ><a href=""> Read more on our Blog</a> </h4>
+        </div>
+    </section>
+
+    <section class="secfour">
+        <div class="container secfour">
+            <div class="row">
+                <div class="col-xl-6 col-md-12 col-sm-12 mt-5 cxz">
+                    <div class="pict"><img src="img/leo.png" alt="" width="100%" height="100%"></div>
+                </div>
+                <div class="col-xl-6 col-md-12 col-sm-12 mt-5 mb-5 cxz2">
+                    <h1 style="color:#01a781; font-size: 13px;">UNUS SED LEO</h1>
+                    <h2 class="mb-5" style="color:#01a781; font-size: 50px;">A token designed to empower the Bitfinex community</h2>
+                    <h3 class="mb-5" style="font-size: 20px;">UNUS SED LEO provides utility for those seeking to maximize the output and capabilities of the Bitfinex trading platform.        
+                    </h3>
+                    <h4 style="font-size: 16px;"><a href="" style=" color:#01a781 ; text-decoration: none;"> > Access the LEO dashboard here</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secfive">
+        <div class="container five">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 col-sm-12 zzz1">
+                    <h1>Join Bitfinex and </h1>
+                    <h1>start trading today</h1>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-12 zzz ">
+                    <div class="ida">
+                        <a href="" class="btn btn-itd btn-lg itd" style="font-size: 18px;">Sing Up</a>
+                        <a href="" class="btn btn-itd btn-lg itd2" style="font-size: 18px;">Login</a> 
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container secsix">
+           <div class="row">
+            <div class="row">
+            <div class="pict mb-5"><img src="img/bitfinex-logo.svg" alt="" width="15%" height="10%"></div>
+            <div class="container abc">
+                <footer class="py-5">
+                  <div class="row">
+                    <div class="col-2">
+                      <h5>Section</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-2">
+                      <h5>Section</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-2">
+                      <h5>Section</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                      </div>
+                    
+
+                      <div class="col-2">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                      </div>
+                
+              
+                    
+                  </div>
+              
+                  <div class="d-flex justify-content-between py-4 mt-5">
+                    <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                      <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                      <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                      <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+                    </ul>
+                  </div>
+                </footer>
+              </div>
+              
+        </div>
+
+           </div>
+        </div>
+    </section>
+
+   
+       
+
+    
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
