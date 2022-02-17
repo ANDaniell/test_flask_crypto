@@ -1,0 +1,40 @@
+.about1{
+    padding-top: 100px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.about2{
+   
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color:#172D3E ;
+}
+
+.about3{
+    padding-left: 6%;
+    padding-right: 6%;
+
+}
+
+.about4 {
+    padding-left: 6%;
+    padding-right: 6%;
+
+}
+
+.ppm h1{
+   font-size: 18px;
+   color:#01a781 ;
+   font-weight: 700;
+   padding-bottom: 20px;
+}
+.ppm h3 {
+    font-size: 16px;
+}
+
+.ppm{
+    padding-left: 6%;
+    padding-right: 6%;
+
+}

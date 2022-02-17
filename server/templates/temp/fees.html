@@ -1,0 +1,1447 @@
+{% extends 'layout.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleb.css')}}">
+{% endblock style %}
+
+
+{% block content %}
+
+
+<div class="notnav">
+
+    <section class="fees">
+        <div class="continer fes">
+            <div class="row">
+
+                <div class="mt-5">
+                    <h2 class="mb-5">Fees Calculator</h2>
+                </div>
+                <div class="clo-xl-3 col-md-3 col-sm-12">
+                    <h3 class="mb-3" style="color: #01a781;">
+                        Crypto to Cryptoe.g. BTC/ETH
+                    </h3>
+                    <h3>0.100%</h3>
+                    <h3 class="mb-3">Maker fees</h3>
+                    <h3>0.200%</h3>
+                    <h3 class="mb-3">Taker fees</h3>
+                    <h3>0bps</h3>
+                    <h3 class="mb-3">Taker discount LEO holders</h3>
+                    <h3 style="color: #01a781;">0.2000%</h3>
+                    <h3 style="color: #01a781;">Net Taker Fees</h3>
+                </div>
+                <div class="clo-xl-3 col-md-3 col-sm-12">
+                    <h3 class="mb-3" style="color: #01a781;">Crypto to Stablecoine.g. BTC/USDt</h3>
+                    <h3>0.100%</h3>
+                    <h3 class="mb-3">Maker fees</h3>
+                    <h3>0.200%</h3>
+                    <h3 class="mb-3">Taker fees</h3>
+                    <h3>0bps</h3>
+                    <h3 class="mb-3">Taker discount LEO holders</h3>
+                    <h3 style="color: #01a781;">0.2000%</h3>
+                    <h3 style="color: #01a781;">Net Taker Fees</h3>
+                </div>
+                <div class="clo-xl-3 col-md-3 col-sm-12">
+                    <h3 class="mb-3" style="color: #01a781;">Crypto to Fiate.g. BTC/USD</h3>
+                    <h3>0.100%</h3>
+                    <h3 class="mb-3">Maker fees</h3>
+                    <h3>0.200%</h3>
+                    <h3 class="mb-3">Taker fees</h3>
+                    <h3>0bps</h3>
+                    <h3 class="mb-3">Taker discount LEO holders </h3>
+                    <h3 style="color: #01a781;">0.2000%</h3>
+                    <h3 style="color: #01a781;">Net Taker Fees </h3>
+                </div>
+                <div class="clo-xl-3 col-md-3 col-sm-12">
+                    <h3 class="mb-3" style="color: #01a781;">Derivativese.g. BTC-PERP</h3>
+                    <h3>0.0200%</h3>
+                    <h3 class="mb-3">Maker fees</h3>
+                    <h3>0.0650%</h3>
+                    <h3 class="mb-3">Taker fees</h3>
+                    <h3>0bps / 0bps</h3>
+                    <h3 class="mb-3">Maker / Taker discount LEO holders</h3>
+                    <h3 style="color: #01a781;">0.0200% / 0.0650%</h3>
+                    <h3 style="color: #01a781;">Net Maker / Taker Fees</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="fees1 ">
+        <div class="continer feses1">
+            <div class="row">
+
+                <h1 style="margin-top: 35px; margin-bottom: 10px; color: #01a781;">Unus Sed LEO fees discounts</h1>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col" style="text-align: right;">LEVEL 1</th>
+                        <th scope="col" style="text-align: right;">LEVEL 2</th>
+                        <th scope="col" style="text-align: right;">LEVEL 3</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Level requirement</th>
+                        <td style="color:#01a781; text-align: right;">> 1 USDt LEO equiv.</td>
+                        <td style="color:#01a781; text-align: right;">> 5000 USDt LEO equiv.</td>
+                        <td style="color:#01a781; text-align: right;">> 10000 USDt LEO equiv.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Crypto-to-Crypto</th>
+                        <td style="color:#01a781; text-align: right;">-15.000% (Taker fees)</td>
+                        <td style="color:#01a781; text-align: right;">-25.000% (Taker fees)</td>
+                        <td style="color:#01a781; text-align: right;">-(25.000% + up to 6bps) (Taker fees)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Crypto-to-Stablecoin</th>
+                        <td style="color:#01a781; text-align: right;">-15.000% (Taker fees)</td>
+                        <td style="color:#01a781; text-align: right;">-25.000% (Taker fees)</td>
+                        <td style="color:#01a781; text-align: right;">-(25.000% + up to 6bps) (Taker fees)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Crypto-to-Fiat</th>
+                        <td style="color:#01a781; text-align: right;">-</td>
+                        <td style="color:#01a781; text-align: right;">-10.000% (Taker fees)</td>
+                        <td style="color:#01a781; text-align: right;">-(10.000% + up to 6bps) (Taker fees)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Crypto-Derivatives</th>
+                        <td style="color:#01a781; text-align: right;">-</td>
+                        <td style="color:#01a781; text-align: right;">-</td>
+                        <td style="color:#01a781; text-align: right;">-(up to 0.5bps/1.5bps) (Maker fees / Taker fees)
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1 style="font-size:14px;">Level 1: users that had an average of at least 1 USDt LEO equivalent in
+                    their pampBit wallets over the last 30 days (snapshots taken every 00:00 UTC using daily VWAP).</h1>
+    </section>
+    <section class="fees2">
+        <div class="container fees2">
+            <div class="row">
+                <h2 class="mb-5" style="color:#01a781; font-size: 50px;">Order execution</h2>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th>EXECUTED IN THE LAST 30 DAYS (USD EQUIVALENT)</th>
+                        <th>MAKER FEES</th>
+                        <th>TAKER FEES</th>
+                        <th>TAKER DISCOUNT LEO HOLDERS</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>$0.00 or more traded</td>
+                        <td>0.100<!-- --> %</td>
+                        <td>0.200<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$500,000.00 or more traded</td>
+                        <td>0.080<!-- --> %</td>
+                        <td>0.200<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$1,000,000.00 or more traded</td>
+                        <td>0.060<!-- --> %</td>
+                        <td>0.200<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$2,500,000.00 or more traded</td>
+                        <td>0.040<!-- --> %</td>
+                        <td>0.200<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$5,000,000.00 or more traded</td>
+                        <td>0.020<!-- --> %</td>
+                        <td>0.200<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$7,500,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.200<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$10,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.180<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$15,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.160<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$20,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.140<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$25,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.120<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$30,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.100<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$300,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.090<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$1,000,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.085<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$3,000,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.075<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$10,000,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.060<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    <tr>
+                        <td>$30,000,000,000.00 or more traded</td>
+                        <td>0.000<!-- --> %</td>
+                        <td>0.055<!-- --> %</td>
+                        <td>up to -(25.000% + 6bps)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1>Maker fees are paid when you add liquidity to our order book by placing a limit order under the
+                    ticker price for buy and above the ticker price for sell.
+                    Taker fees are paid when you remove liquidity from our order book by placing any order that is
+                    executed against an order of the order book.</h1>
+                <h1>* Promotion: zero trading fee on the Tether/US Dollar (USDt/USD) pair to users who reach a trailing
+                    30 day eligible trading volume of more than $15 million; applicable for both maker and taker
+                    orders.</h1>
+                <h1>Note: If you place a hidden order, you will always pay the taker fee. If you place a limit order
+                    that hits a hidden order, you will always pay the maker fee.
+                </h1>
+                <h1>Note: A minimum 2.5bps taker fees will be applied.
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="fees3">
+        <div class="container fees3">
+            <div class="row">
+                <h1 style="font-size: 50px; color: #01a781;"> Derivatives order execution</h1>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th>EXECUTED IN THE LAST 30 DAYS (USD EQUIVALENT)</th>
+                        <th>Maker Fee</th>
+                        <th>LEO maker discount</th>
+                        <th>Min maker fee (with LEO)</th>
+                        <th>Taker Fees</th>
+                        <th>LEO Taker discount</th>
+                        <th>Min taker fee (with LEO)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>$0.00 or more traded</td>
+                        <td>0.0200<!-- --> %</td>
+                        <td>0.0000%</td>
+                        <td>0.0200<!-- --> %</td>
+                        <td>0.0650<!-- --> %</td>
+                        <td>up to -0.0200<!-- --> %</td>
+                        <td>0.0450<!-- --> %</td>
+                    </tr>
+                    <tr>
+                        <td>$2,000,000.00 or more traded</td>
+                        <td>0.0125<!-- --> %</td>
+                        <td>0.0000%</td>
+                        <td>0.0125<!-- --> %</td>
+                        <td>0.0600<!-- --> %</td>
+                        <td>up to -0.0200<!-- --> %</td>
+                        <td>0.0400<!-- --> %</td>
+                    </tr>
+                    <tr>
+                        <td>$7,500,000.00 or more traded</td>
+                        <td>0.0100<!-- --> %</td>
+                        <td>0.0000%</td>
+                        <td>0.0100<!-- --> %</td>
+                        <td>0.0550<!-- --> %</td>
+                        <td>up to -0.0200<!-- --> %</td>
+                        <td>0.0350<!-- --> %</td>
+                    </tr>
+                    <tr>
+                        <td>$30,000,000.00 or more traded</td>
+                        <td>-0.0025<!-- --> %</td>
+                        <td>up to -0.0050%</td>
+                        <td>-0.0075<!-- --> %</td>
+                        <td>0.0450<!-- --> %</td>
+                        <td>up to -0.0150<!-- --> %</td>
+                        <td>0.0300<!-- --> %</td>
+                    </tr>
+                    <tr>
+                        <td>$300,000,000.00 or more traded</td>
+                        <td>-0.0050<!-- --> %</td>
+                        <td>up to -0.0050%</td>
+                        <td>-0.0100<!-- --> %</td>
+                        <td>0.0400<!-- --> %</td>
+                        <td>up to -0.0150<!-- --> %</td>
+                        <td>0.0250<!-- --> %</td>
+                    </tr>
+                    <tr>
+                        <td>$1,000,000,000.00 or more traded</td>
+                        <td>-0.0075<!-- --> %</td>
+                        <td>up to -0.0050%</td>
+                        <td>-0.0125<!-- --> %</td>
+                        <td>0.0375<!-- --> %</td>
+                        <td>up to -0.0150<!-- --> %</td>
+                        <td>0.0225<!-- --> %</td>
+                    </tr>
+                    <tr>
+                        <td>$3,000,000,000.00 or more traded</td>
+                        <td>-0.0100<!-- --> %</td>
+                        <td>up to -0.0050%</td>
+                        <td>-0.0150<!-- --> %</td>
+                        <td>0.0350<!-- --> %</td>
+                        <td>up to -0.0150<!-- --> %</td>
+                        <td>0.0200<!-- --> %</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1>The amount of each transaction fee and rebate is calculated as a percentage of the value of the
+                    trade to which it applies.</h1>
+                <h1>Maker Fees are paid by the counterparty who adds liquidity to BFXD’s order books. Maker Transaction
+                    Fees apply upon execution of a limit order, which is placed by that counterparty and resting in the
+                    order book before execution. Where Maker Transaction Fees are negative, a rebate is paid.
+                </h1>
+                <h1>Taker Fees are paid by the counterparty who removes liquidity from BFXD’s order book by placing an
+                    order that is executed against an order of the order book.
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="fees4">
+        <div class="container fees4">
+            <div class="row">
+                <h1 style=" color:#01a781;font-size: 50px;">pampBit Borrow </h1>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Funding Fees</th>
+                        <th>LEO</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Charge on pampBit Borrow Funding Recipients (i.e., borrower) *</td>
+                        <td>Order Execution “Maker Fees” will be charged twice: (1) first upon depositing collateral to
+                            pampBit Borrow, and (2) again upon returning borrowed funds and obtaining a return of the
+                            collateral.
+                        </td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Charge on fees collected by pampBit Borrow Funding Providers (i.e., lender) *</td>
+                        <td>15% (of the fees generated by active pampBit Borrow loans)</td>
+                        <td>up to -5%**</td>
+                    </tr>
+                    <tr>
+                        <td>Charge on fees collected by pampBit Borrow Funding Providers (i.e., lender), when opened by
+                            a hidden offer*
+                        </td>
+                        <td>18.0% (of the fees generated by active pampBit Borrow loans)</td>
+                        <td>up to -5%**</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1>* Funding Recipient (i.e., borrower) will be charged interest in one second increments except when
+                    funding is borrowed and subsequently manually returned. In this case the Financing Recipient (i.e.,
+                    borrower) will be charged a minimum of one hour of interest. After one hour, interest will accrue in
+                    one second increments (like any other borrowing). More Information.
+                </h1>
+                <h1>If Funding Recipient chooses a “Variable Interest Rate” loans do not start until Funding Recipient
+                    takes the funds out of her margin wallet. “Fixed Rate” loans start as soon as Funding Recipient
+                    (i.e., borrower) is matched with Funding Provider (i.e., lender), whether or not Funding Recipient
+                    removes funds from her margin wallet.
+                </h1>
+                <h1>In the event pampBit takes over your loan position(s) rather than liquidating it, for the reasons
+                    described in the Terms of Service, you will be charged a fee of 5.0% of the loss you would have
+                    incurred if your position was immediately liquidated at the time pampBit took over your position.
+                </h1>
+                <h1>The fees charged upon depositing collateral to pampBit Borrow and upon receiving a return of
+                    collateral from pampBit Borrow are an amount equal to the “maker fees” that would be applicable to
+                    you if the loan transaction were an order on the exchange (either to sell the collateral for the
+                    borrowed funds on loan creation, or to sell the borrowed funds for the collateral in order to
+                    receive a return of your collateral). Your 30-day volume for purposes of calculating the “maker” or
+                    “taker” fees applicable to you will not include the loans you take as a Financing Recipient (i.e.,
+                    borrower) on pampBit Borrow.
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="fees5">
+        <div class="container fees5">
+            <div class="row">
+                <h2 style="font-size: 50px; color: #01a781;">Margin funding
+                </h2>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Funding Fees</th>
+                        <th>LEO</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Charge on fees collected by Margin Funding Providers (i.e., lender)*</td>
+                        <td>15.0% (of the fees generated by active margin funding contracts)</td>
+                        <td>up to -5%**</td>
+                    </tr>
+                    <tr>
+                        <td>Charge on fees collected by Margin Funding Providers (i.e., lender)*, when opened by a
+                            hidden offer*
+                        </td>
+                        <td>18.0% (of the fees generated by active margin funding contracts)</td>
+                        <td>up to -5%**</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1>* Funding Recipient (i.e., borrower) will be charged interest in one second increments except when
+                    funding is borrowed and subsequently manually returned. In this case the Financing Recipient (i.e.,
+                    borrower) will be charged a minimum of one hour of interest. After one hour, interest will accrue in
+                    one second increments (like any other borrowing). More Information
+                </h1>
+                <h1>In the event pampBit takes over your margin position(s) rather than liquidating it, for the reasons
+                    described in the Terms of Service, you will be charged a fee of 5.0% of the loss you would have
+                    incurred if your position was immediately liquidated at the time pampBit took over your position.
+                </h1>
+                <h1>**The discount in P2P lending fees reduces the fees by the equivalent of 0.05% for every 10,000
+                    Tether (USDt) in LEO tokens held in a trading account during the previous month (calculated daily).
+                    Note: the discount does not apply to LEO-EOS and LEO-ERC20: more information.
+                </h1>
+                <h1 class="mt-5" style=" color:#01a781;font-size: 50px;"> OTC desk
+                </h1>
+                <h1 class="mt-2">The pampBit OTC Desk allows traders to make large trades directly with a counterparty
+                    without having to hit the public order books. For instant access or more information, log in and
+                    visit The OTC Desk
+                </h1>
+                <h1 class="mt-2">There is no trading fee for OTC trades brokered by the The OTC Desk. For other OTC
+                    trades there is a fee of 10 basis points on both sides.
+                </h1>
+            </div>
+        </div>
+
+    </section>
+    <section class="fees6">
+        <div class="container fees6">
+            <div class="row">
+                <h2 style="font-size: 50px; color: #01a781;">Deposit</h2>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th>CURRENCY</th>
+                        <th>DEPOSIT</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Crypto</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Stablecoin</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Bank wire</td>
+                        <td>0.100% (min 60, USD/Euro)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1>Note: Please exercise extreme care when depositing tokens. In cases where token recovery is needed
+                    due to a lack of information provided by you during deposit (e.g., missing or wrong tag, memo or
+                    payment id) pampBit will charge you a $150.00 fee for the token recovery.
+                </h1>
+                <h1>Where token recovery is due to a deposit mistake, pampBit may, in certain limited cases and in its
+                    sole discretion, attempt to assist you to recover your token(s) and will charge you fees as
+                    determined here.
+                </h1>
+                <h1>Please note that the recovery process can take months. Please be patient.
+                </h1>
+                <h2 class="mt-5" style="font-size: 50px; color: #01a781;">Withdrawal</h2>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1INCH</td>
+                        <td>5.0832 1INCH</td>
+                    </tr>
+                    <tr>
+                        <td>AAVE</td>
+                        <td>0.051904 AAVE</td>
+                    </tr>
+                    <tr>
+                        <td>Cardano ADA</td>
+                        <td>0.3 ADA</td>
+                    </tr>
+                    <tr>
+                        <td>ADD</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Multiverse (AI)</td>
+                        <td>662.71 AI</td>
+                    </tr>
+                    <tr>
+                        <td>AllianceBlock</td>
+                        <td>25.703 ALBT</td>
+                    </tr>
+                    <tr>
+                        <td>Algorand</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Ampleforth</td>
+                        <td>12.509 AMPL</td>
+                    </tr>
+                    <tr>
+                        <td>Anchor</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Aragon</td>
+                        <td>1.477 ANT</td>
+                    </tr>
+                    <tr>
+                        <td>Atidium</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Cosmos-Atom</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Avalanche</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>AVAXC</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Axie Infinity</td>
+                        <td>0.15562 AXS</td>
+                    </tr>
+                    <tr>
+                        <td>B21</td>
+                        <td>285.29 B21</td>
+                    </tr>
+                    <tr>
+                        <td>Balancer</td>
+                        <td>0.7093 BAL</td>
+                    </tr>
+                    <tr>
+                        <td>Band</td>
+                        <td>2.1023 BAND</td>
+                    </tr>
+                    <tr>
+                        <td>Basic Attention Token</td>
+                        <td>11.693 BAT</td>
+                    </tr>
+                    <tr>
+                        <td>XEC</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin Cash</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Bitpanda</td>
+                        <td>12.541 BEST</td>
+                    </tr>
+                    <tr>
+                        <td>BnkToTheFuture</td>
+                        <td>946.62 BFT</td>
+                    </tr>
+                    <tr>
+                        <td>BridgeMutual</td>
+                        <td>57.072 BMI</td>
+                    </tr>
+                    <tr>
+                        <td>Bancor</td>
+                        <td>3.8548 BNT</td>
+                    </tr>
+                    <tr>
+                        <td>BOBA</td>
+                        <td>4.2439 BOBA</td>
+                    </tr>
+                    <tr>
+                        <td>Boson Token</td>
+                        <td>9.2607 BOSON</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin SV</td>
+                        <td>0.001 BSV</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin</td>
+                        <td>0.0004 BTC</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin Gold</td>
+                        <td>0.001 BTG</td>
+                    </tr>
+                    <tr>
+                        <td>BTSE</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>BitTorrent</td>
+                        <td>50 BTT</td>
+                    </tr>
+                    <tr>
+                        <td>Celsius</td>
+                        <td>3.9139 CEL</td>
+                    </tr>
+                    <tr>
+                        <td>CHEX</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>SwissBorg</td>
+                        <td>21.288 CHSB</td>
+                    </tr>
+                    <tr>
+                        <td>socios.com Chiliz</td>
+                        <td>46.198 CHZ</td>
+                    </tr>
+                    <tr>
+                        <td>Callisto</td>
+                        <td>1 CLO</td>
+                    </tr>
+                    <tr>
+                        <td>CNHTE</td>
+                        <td>78.804 CNHTE</td>
+                    </tr>
+                    <tr>
+                        <td>Compound</td>
+                        <td>0.065096 COMP</td>
+                    </tr>
+                    <tr>
+                        <td>Curve</td>
+                        <td>2.3889 CRV</td>
+                    </tr>
+                    <tr>
+                        <td>BCH ABC Chain Split Token</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>BCH Node Chain Split Token</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>CERTIK</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Dai Stablecoin</td>
+                        <td>12.293 DAI</td>
+                    </tr>
+                    <tr>
+                        <td>Streamr</td>
+                        <td>117.68 DATA</td>
+                    </tr>
+                    <tr>
+                        <td>Decred</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Digibyte</td>
+                        <td>0.5 DGB</td>
+                    </tr>
+                    <tr>
+                        <td>MegaDOGE</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>DOGE</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Dora</td>
+                        <td>1.5186 DORA</td>
+                    </tr>
+                    <tr>
+                        <td>Polkadot</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Dash</td>
+                        <td>0.002 DASH</td>
+                    </tr>
+                    <tr>
+                        <td>Dusk Network</td>
+                        <td>12.364 DUSK</td>
+                    </tr>
+                    <tr>
+                        <td>Deversifi Token</td>
+                        <td>1.9192 DVF</td>
+                    </tr>
+                    <tr>
+                        <td>pNetwork</td>
+                        <td>14.294 PNT</td>
+                    </tr>
+                    <tr>
+                        <td>Elrond</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Enjin</td>
+                        <td>4.9841 ENJ</td>
+                    </tr>
+                    <tr>
+                        <td>EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>EOSDT</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Essentia</td>
+                        <td>6701 ESS</td>
+                    </tr>
+                    <tr>
+                        <td>Ethereum Classic</td>
+                        <td>0.01 ETC</td>
+                    </tr>
+                    <tr>
+                        <td>Ethereum</td>
+                        <td>0.003717 ETH</td>
+                    </tr>
+                    <tr>
+                        <td>ETH2P</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>ETH2R</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>ETH2X</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>ETP</td>
+                        <td>0.01 ETP</td>
+                    </tr>
+                    <tr>
+                        <td>EURt (ETH)</td>
+                        <td>10.762 EUE</td>
+                    </tr>
+                    <tr>
+                        <td>EURS</td>
+                        <td>10.648 EURS</td>
+                    </tr>
+                    <tr>
+                        <td>Exordium</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>E-RADIX</td>
+                        <td>51.426 EXRD</td>
+                    </tr>
+                    <tr>
+                        <td>Fractal</td>
+                        <td>92.74 FCL</td>
+                    </tr>
+                    <tr>
+                        <td>Fetch.AI</td>
+                        <td>27.401 FET</td>
+                    </tr>
+                    <tr>
+                        <td>Filecoin</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>FORTH</td>
+                        <td>1.5626 FORTH</td>
+                    </tr>
+                    <tr>
+                        <td>Fantom</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>FTX.com</td>
+                        <td>0.26777 FTT</td>
+                    </tr>
+                    <tr>
+                        <td>FunFair</td>
+                        <td>1018.6 FUN</td>
+                    </tr>
+                    <tr>
+                        <td>Gnosis</td>
+                        <td>0.035241 GNO</td>
+                    </tr>
+                    <tr>
+                        <td>Golem</td>
+                        <td>28.337 GLM</td>
+                    </tr>
+                    <tr>
+                        <td>ParkinGO</td>
+                        <td>169.46 GOT</td>
+                    </tr>
+                    <tr>
+                        <td>The Graph</td>
+                        <td>21.106 GRT</td>
+                    </tr>
+                    <tr>
+                        <td>Gate.IO</td>
+                        <td>1.7469 GTX</td>
+                    </tr>
+                    <tr>
+                        <td>Hermez</td>
+                        <td>1.4805 HEZ</td>
+                    </tr>
+                    <tr>
+                        <td>Human</td>
+                        <td>19.588 HMT</td>
+                    </tr>
+                    <tr>
+                        <td>ICE</td>
+                        <td>0.61959 ICE</td>
+                    </tr>
+                    <tr>
+                        <td>Dfinity</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Everest (ID)</td>
+                        <td>30.323 ID</td>
+                    </tr>
+                    <tr>
+                        <td>Iota</td>
+                        <td>0.5 IOTA</td>
+                    </tr>
+                    <tr>
+                        <td>Everipedia</td>
+                        <td>10 IQX</td>
+                    </tr>
+                    <tr>
+                        <td>Jasmy</td>
+                        <td>173.96 JASMY</td>
+                    </tr>
+                    <tr>
+                        <td>JST</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>KardiaChain</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>BitKan</td>
+                        <td>6551.4 KAN</td>
+                    </tr>
+                    <tr>
+                        <td>Kyber</td>
+                        <td>8.332 KNC</td>
+                    </tr>
+                    <tr>
+                        <td>Kusama</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin (Liquid)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Unus Sed LEO</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Unus Sed LEO (EOS)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Unus Sed LEO (ERC20)</td>
+                        <td>3.2935 LEO-ERC20</td>
+                    </tr>
+                    <tr>
+                        <td>ChainLink</td>
+                        <td>0.47637 LINK</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin (Lightning Network)</td>
+                        <td>0.000001 LN-BTC</td>
+                    </tr>
+                    <tr>
+                        <td>Loopring</td>
+                        <td>9.2907 LRC</td>
+                    </tr>
+                    <tr>
+                        <td>Litecoin</td>
+                        <td>0.001 LTC</td>
+                    </tr>
+                    <tr>
+                        <td>LUNA</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Lympo</td>
+                        <td>2612.3 LYM</td>
+                    </tr>
+                    <tr>
+                        <td>MATIC (Polygon)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Magic Internet Money</td>
+                        <td>12.313 MIM</td>
+                    </tr>
+                    <tr>
+                        <td>Mirror Protocol</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Maker</td>
+                        <td>0.0056167 MKR</td>
+                    </tr>
+                    <tr>
+                        <td>Melon</td>
+                        <td>0.16064 MLN</td>
+                    </tr>
+                    <tr>
+                        <td>Decentraland</td>
+                        <td>4.1694 MANA</td>
+                    </tr>
+                    <tr>
+                        <td>Mobilecoin</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>MEET.ONE</td>
+                        <td>3872.9 MTO</td>
+                    </tr>
+                    <tr>
+                        <td>Near</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Ethfinex Nectar Token</td>
+                        <td>0.003717 NEC</td>
+                    </tr>
+                    <tr>
+                        <td>NEO</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>NEXO</td>
+                        <td>5.3889 NEXO</td>
+                    </tr>
+                    <tr>
+                        <td>OCEAN protocol</td>
+                        <td>14.777 OCEAN</td>
+                    </tr>
+                    <tr>
+                        <td>Odem</td>
+                        <td>5956.4 ODE</td>
+                    </tr>
+                    <tr>
+                        <td>OmiseGO</td>
+                        <td>1.9213 OMG</td>
+                    </tr>
+                    <tr>
+                        <td>Omni</td>
+                        <td>1 OMNI</td>
+                    </tr>
+                    <tr>
+                        <td>ORS</td>
+                        <td>14595 ORS</td>
+                    </tr>
+                    <tr>
+                        <td>Oxygen</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pANT on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Blockpass</td>
+                        <td>6446.9 PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Paxos</td>
+                        <td>12.329 PAX</td>
+                    </tr>
+                    <tr>
+                        <td>pBAL on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pBAND on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pBAT on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pBTC on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pBTC on ETH</td>
+                        <td>0.00028661 PBTC-ETH</td>
+                    </tr>
+                    <tr>
+                        <td>pCOMP on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pDAI on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pEOS on ETH</td>
+                        <td>4.2594 PEOSETH</td>
+                    </tr>
+                    <tr>
+                        <td>pETH on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>PLANETS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pLINK on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pLRC on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pLTC on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pLTC on ETH</td>
+                        <td>0.085115 PLTC-ETH</td>
+                    </tr>
+                    <tr>
+                        <td>Pluton</td>
+                        <td>1.7196 PLU</td>
+                    </tr>
+                    <tr>
+                        <td>pMKR on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Pangolin</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Kleros</td>
+                        <td>92.717 PNK</td>
+                    </tr>
+                    <tr>
+                        <td>pOMG on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pPNK on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pPNT on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pREP on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pSNX on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pUNI on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pUOS on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pYFI on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>pZRX on EOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>QRDO</td>
+                        <td>2.5947 QRDO</td>
+                    </tr>
+                    <tr>
+                        <td>QASH</td>
+                        <td>156.12 QASH</td>
+                    </tr>
+                    <tr>
+                        <td>Quantfury</td>
+                        <td>0.87488 QTF</td>
+                    </tr>
+                    <tr>
+                        <td>Qtum</td>
+                        <td>0.01 QTUM</td>
+                    </tr>
+                    <tr>
+                        <td>RBTC</td>
+                        <td>0.00001 RBTC</td>
+                    </tr>
+                    <tr>
+                        <td>REEF</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Augur</td>
+                        <td>0.73018 REP2</td>
+                    </tr>
+                    <tr>
+                        <td>Request Network</td>
+                        <td>42.772 REQ</td>
+                    </tr>
+                    <tr>
+                        <td>RingX</td>
+                        <td>0.003717 RINGX</td>
+                    </tr>
+                    <tr>
+                        <td>Oasis (Rose)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>RenrenBit</td>
+                        <td>0.003717 RRB</td>
+                    </tr>
+                    <tr>
+                        <td>Santiment</td>
+                        <td>30.371 SAN</td>
+                    </tr>
+                    <tr>
+                        <td>SHIB</td>
+                        <td>403330 SHIB</td>
+                    </tr>
+                    <tr>
+                        <td>SingularDTV</td>
+                        <td>0.003717 SNGLS</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>195.98 SNT</td>
+                    </tr>
+                    <tr>
+                        <td>Synthetix Network</td>
+                        <td>2.3262 SNX</td>
+                    </tr>
+                    <tr>
+                        <td>Solana</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>SPELL</td>
+                        <td>775.94 SPELL</td>
+                    </tr>
+                    <tr>
+                        <td>SERUM</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Storj</td>
+                        <td>7.4415 STORJ</td>
+                    </tr>
+                    <tr>
+                        <td>SUKU</td>
+                        <td>29.631 SUKU</td>
+                    </tr>
+                    <tr>
+                        <td>SUN</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>SUSHI</td>
+                        <td>1.7799 SUSHI</td>
+                    </tr>
+                    <tr>
+                        <td>TerraUST</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Theta</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>TELOS</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>TRON</td>
+                        <td>1 TRX</td>
+                    </tr>
+                    <tr>
+                        <td>TrueUSD</td>
+                        <td>12.301 TUSD</td>
+                    </tr>
+                    <tr>
+                        <td>USDc</td>
+                        <td>12.328 USDC</td>
+                    </tr>
+                    <tr>
+                        <td>Uniswap</td>
+                        <td>0.72571 UNI</td>
+                    </tr>
+                    <tr>
+                        <td>Utopia</td>
+                        <td>142.22 UOP</td>
+                    </tr>
+                    <tr>
+                        <td>Ultra</td>
+                        <td>9.3414 UOS</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (Algorand)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (AVAX-C)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (BCH)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDTDVF</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDTHEZ</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDTOMG</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (SOL)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (ETH)</td>
+                        <td>12.329 USE</td>
+                    </tr>
+                    <tr>
+                        <td>USL</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (Omni)</td>
+                        <td>5 USO</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (EOS)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>USDt (Tron)</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>UTRUST</td>
+                        <td>34.045 UTK</td>
+                    </tr>
+                    <tr>
+                        <td>BLOCKv</td>
+                        <td>1454.9 VEE</td>
+                    </tr>
+                    <tr>
+                        <td>VELO</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>VEN</td>
+                        <td>0.003717 VEN</td>
+                    </tr>
+                    <tr>
+                        <td>VeChain</td>
+                        <td>100 VET</td>
+                    </tr>
+                    <tr>
+                        <td>v.systems</td>
+                        <td>1 VSYS</td>
+                    </tr>
+                    <tr>
+                        <td>WAVES</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>WAX</td>
+                        <td>3.7504 WAX</td>
+                    </tr>
+                    <tr>
+                        <td>Wrapped Bitcoin</td>
+                        <td>0.00028654 WBTC</td>
+                    </tr>
+                    <tr>
+                        <td>Wilder World</td>
+                        <td>4.2589 WILD</td>
+                    </tr>
+                    <tr>
+                        <td>WNCG</td>
+                        <td>8.742 WNCG</td>
+                    </tr>
+                    <tr>
+                        <td>XAUTe</td>
+                        <td>0.0067605 XAUTE</td>
+                    </tr>
+                    <tr>
+                        <td>CryptoFranc</td>
+                        <td>11.313 XCHF</td>
+                    </tr>
+                    <tr>
+                        <td>XinFin</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Stellar Lumen</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Monero</td>
+                        <td>0.0001 XMR</td>
+                    </tr>
+                    <tr>
+                        <td>Xriba</td>
+                        <td>713.24 XRA</td>
+                    </tr>
+                    <tr>
+                        <td>RADIX</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Ripple</td>
+                        <td>0.1 XRP</td>
+                    </tr>
+                    <tr>
+                        <td>Stakenet</td>
+                        <td>FREE</td>
+                    </tr>
+                    <tr>
+                        <td>Tezos</td>
+                        <td>0.2 XTZ</td>
+                    </tr>
+                    <tr>
+                        <td>Verge</td>
+                        <td>0.1 XVG</td>
+                    </tr>
+                    <tr>
+                        <td>Yearn.Finance</td>
+                        <td>0.00040884 YFI</td>
+                    </tr>
+                    <tr>
+                        <td>MCS</td>
+                        <td>31943 MCS</td>
+                    </tr>
+                    <tr>
+                        <td>0Chain</td>
+                        <td>31.676 ZCN</td>
+                    </tr>
+                    <tr>
+                        <td>Zcash</td>
+                        <td>0.003 ZEC</td>
+                    </tr>
+                    <tr>
+                        <td>Zilliqa</td>
+                        <td>27.552 ZIL</td>
+                    </tr>
+                    <tr>
+                        <td>Zipmex Token</td>
+                        <td>3.5962 ZMT</td>
+                    </tr>
+                    <tr>
+                        <td>0x</td>
+                        <td>16.275 ZRX</td>
+                    </tr>
+                    <tr>
+                        <td>Bank wire</td>
+                        <td>0.100% (min 60, USD/Euro)</td>
+                    </tr>
+                    <tr>
+                        <td>Express bank wire (within 24, hours on business days)</td>
+                        <td>1.000% (min 100, USD/Euro)</td>
+                    </tr>
+                    <tr>
+                        <td>Internal transfer (digital assets only)</td>
+                        <td>FREE</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h1>Digital assets withdrawals towards another pampBit user's address are free of charge. Learn more
+                    about the advantages of internal transfers here.</h1>
+            </div>
+        </div>
+
+    </section>
+    <section class="secfive" style="background-color:#102331;">
+        <div class="container five">
+            <div class="row">
+                <link rel="stylesheet" href="css/style.css">
+                <div class="col-xl-6 col-md-6 col-sm-12 zzz1">
+                    <h1>Join pampBit and </h1>
+                    <h1>start trading today</h1>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-12 zzz ">
+                    <div class="ida">
+                        <a href="" class="btn btn-itd btn-lg itd" style="font-size: 18px;">Sing Up</a>
+                        <a href="" class="btn btn-itd btn-lg itd2" style="font-size: 18px;">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content%}

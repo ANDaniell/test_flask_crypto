@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<section class="exchange" style="margin-top: 50px ;">
+    <div class="container exchange">
+        <div class="row">
+            <h3>Exchange</h3>
+
+            <h4 style="font-size: 16px;">In this section, you can quickly make currency exchange. To do this, the assets
+                must be in the trade account of your wallet.</h4>
+
+            <div class="container jjjs1 mt-3" style="margin-left: 1em">
+                <div class="row">
+                    <h4 style="text-align: left; font-size: 16px; margin-top: 30px; margin-left: 30px;">Select currency
+                        pair to exchange</h4>
+
+                    <div class="col-xl-6 col-md-6 col-sm-12 ">
+                        <div class="row">
+                            <h4 style="text-align: left; font-size: 16px; margin-top: 10px; margin-left: 30px;">I
+                                give</h4>
+                            <input type="text" class="form-control gggg12"
+                                   style="width: 45%; background-color: aliceblue; margin-left: 40px ; margin-top: 30px;">
+                            <select class="form-control gggg12"
+                                    style="width: 20%;  background-color: aliceblue;  margin-top: 30px;">
+                                <option value="other">ETC</option>
+                                <option value="deposit">LTC</option>
+                                <option value="withdraw">BTC</option>
+                                <option value="trade_balance">USDT</option>
+                                <option value="report">XLM</option>
+                            </select></div>
+                    </div>
+
+                    <div class="col-xl-6 col-md-6 col-sm-12 ">
+                        <div class="row">
+                            <h4 style="text-align: left; font-size: 16px; margin-top: 10px; margin-left: 40px;">I
+                                receive</h4>
+                            <input type="text" class="form-control gggg12"
+                                   style="width: 45%; background-color: aliceblue; margin-left: 40px ; margin-top: 30px;">
+
+                            <select class="form-control gggg12"
+                                    style="width: 20%;  background-color: aliceblue;  margin-top: 30px;">
+                                <option value="other">BTC</option>
+                                <option value="deposit">LTC</option>
+                                <option value="withdraw">ETC</option>
+                                <option value="trade_balance">USDT</option>
+                                <option value="report">XLM</option>
+                            </select></div>
+                    </div>
+                    <button style="width: 100px; margin-top: 30px; margin-left: 40px; background-color: #01a781; border: 0px; border-radius: 3px; height: 40px; color: whitesmoke">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></div>
+</div>
+</div>
+</section>
+
+{% endblock content %}

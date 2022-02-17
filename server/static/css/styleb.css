@@ -1,0 +1,211 @@
+body {
+    background-color:#102331;
+   
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    min-width: 320px;
+    
+}
+
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: whitesmoke;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #172d3e;
+    border: 0px;
+}
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin-top: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: 0;
+    margin-top: 0.125rem;
+    background-color:#172d3e ;
+}
+.navbar-light .navbar-brand {
+    color: whitesmoke;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+
+
+
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #09895b;
+    background-color: #102331;
+}
+    
+.top-menu ul:hover{
+    color:#09895b;
+}
+
+.top-menu a:hover{
+    background-color: #172d3e;
+    color:#09895b;
+}
+
+
+
+/*  not navbar snizy */
+
+.notnav {
+    padding-left: 10%;
+    padding-right: 10%;
+   
+}
+
+
+/*individualnie nastroiki */
+.fees {
+   padding-top: 150px;
+   padding-left: 10%;
+   padding-right: 10%;
+}
+
+.fees h2{
+   
+    color: #01a781;
+}
+
+.fees h3{
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.fees1{
+    padding-left:10%;
+    padding-right: 10%;
+}
+
+ .table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: #102331;
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+ .table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: #172d3e;
+    color: var(--bs-table-striped-color);
+}
+ table tbody td  {
+    color: #01a781;
+}
+
+ tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: none; 
+    border-width: 0;
+}
+
+.table>:not(:first-child) {
+    border-top: none;
+}
+
+ td {
+    font-size: 12px;
+}
+ th {
+    font-size: 12px;
+}
+
+.fees2 {
+    padding-top: 15px;
+    padding-left: 3.7%;
+    padding-right: 3.7%;
+}
+
+.fees2 h1{
+    font-size: 14px;
+}
+
+.fees4 {
+    padding-top: 15px;
+    padding-left: 3.7%;
+    padding-right: 3.7%;
+}
+
+.fees3 {
+    padding-top: 15px;
+    padding-left: 3.7%;
+    padding-right: 3.7%;
+}
+
+.fees3 h1{
+    font-size: 14px;
+}
+.fees4 h1{
+    font-size: 14px;
+}
+
+.fees5 {
+    padding-top: 15px;
+    padding-left: 3.7%;
+    padding-right: 3.7%;
+}
+
+.fees5 h1{
+    font-size: 14px;
+}
+.fees6 {
+    padding-top: 15px;
+    padding-left: 3.7%;
+    padding-right: 3.7%;
+}
+
+.fees6 h1{
+    font-size: 14px;
+}
+
+table tr th:first-child {
+    text-align: left;
+    color: rgb(var(--text-color));
+}
+
+td, th {
+    text-align: right;
+}
+
+table tr td:first-child {
+    text-align: left;
+    color: rgb(var(--text-color));
+}
+
+.market1 {
+    padding-top: 65px ;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.market2 {
+    padding-top: 25px ;
+    padding-left: 8%;
+    padding-right: 8%;
+}

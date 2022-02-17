@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylet.css')}}">
+{% endblock style %}
+
+{% block content %}
+      <section class="smart">
+          <div class="container smart">
+              <div class="row"> 
+                 
+                  <h1>Select your investment plan</h1>
+                <h2 class="mb-3">To invest your funds in an investment plan you must have funds on the main balance and pass VERIFICATION. Each investment plan is created for its interest and duration. If you withdraw funds from the investment plan earlier than required, interest will not be charged.</h2>
+            
+            <h3 class=" mt-5" style=" font-weight :750; font-size: 22px; color: #01a781; text-align: center;">SMART PLANS</h3><hr/>
+                
+               
+           
+           
+            </div>
+         
+      </section>
+      <section class="vbc">
+        <div class="container v1bc">
+        <div class="row">
+      <div class="kkl">
+        <p>NO ACTIVE PLANS AVAILABLE
+        </p>
+
+        
+      </div></div></div>
+     </section>
+     <section class="smart">
+      <div class="container smart">
+          <div class="row"> 
+              <h3 class=" mt-5" 
+              style=" font-weight :750; font-size: 22px; color
+              : #01a781; text-align: center;">
+              My investment history</h3><hr/>
+            
+           
+       
+       
+        </div>
+     
+  </section>
+     <section class="jjj" style=" margin-bottom:90px">
+       <div class="container jjjs">
+       <div class="row">
+      <table class="table table12">
+        <thead>
+          <tr>
+            <th scope="col" style="color
+            : #01a781;">DATE</th>
+            <th scope="col" style="color
+            : #01a781;">PLAN</th>
+            <th scope="col"style="color
+            : #01a781;">ACTION</th>
+            <th scope="col"style="color
+            : #01a781;">BEFORE</th>
+            <th scope="col"style="color
+            : #01a781;">AFTER</th>
+            <th scope="col"style="color
+            : #01a781;">SUM ACCRUED</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+      <div class="kolok">
+        <h5 style="text-align: center; margin-top: 80px; color
+        : #01a781;">YOU HAVE NO PLANS HISTORY</h5>
+      </div>
+    </div></div>
+     </section>
+{% endblock content %}

@@ -1,0 +1,194 @@
+.affi1{
+    padding-top: 80px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.affi1 h1 {
+    font-size: 12px;
+    color: #01a781;
+    font-weight: 750;
+
+}
+
+.affi1 h2{
+    font-size:45px ;
+    padding-top: 20px;
+}
+
+.affi1 h3{
+    font-size: 20px;
+    padding-top: 60px;
+}
+
+
+.affi2{
+    padding-left: 7%;
+    padding-right: 7%;
+    background-color: #172d3e;
+}
+
+.affi2 h1 {
+    font-size: 26px;
+    color: #01a781;
+    font-weight: 750;
+
+}
+
+.affi2 h2 {
+    font-size: 26px;
+
+}
+
+.affi2 h3 {
+    font-size: 20px;
+    padding-top: 35px;
+}
+
+.affi2 h4{
+    padding-top: 30px;
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+.tyz{
+    margin-top: 135px;
+    border: 1px solid #01a781;
+    height: 120px;
+    padding: 10px;
+    margin-left: 10px ;
+}
+
+.tyz h5{
+    font-size: 30px;
+    color: #01a781;
+    font-weight: 750;
+}
+.tyz h6{
+    font-size: 16px;
+    color: #01a781;
+    
+}
+
+.affi3{
+    padding-left: 7%;
+    padding-right: 7%;
+   
+}
+
+.affi3 h2{
+    font-size:18px;
+}
+
+.affi3 h1 {
+    font-size: 28px;
+    color: #01a781;
+    font-weight: 750;
+
+}
+
+.affi3 h3{
+   font-size: 16px;
+   margin-bottom: 20px;
+
+}
+
+.tpz{
+    margin-top: 40px;
+}
+
+.affi3 a{
+    color: #01a781;
+    text-decoration: none;
+}
+
+.affi4{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.affi4 h1{
+    font-size: 30px;
+}
+
+.tyz1{
+    margin-top: 35px;
+    border: 1px solid #01a781;
+    height: 120px;
+    margin: 10px;
+    width: 160px;
+}
+
+.tyz1 h5{
+    font-size: 24px;
+    color: #01a781;
+    font-weight: 750;
+}
+.tyz1 h6{
+    font-size: 16px;
+    color: #01a781;
+    
+}
+
+.oop{
+   font-size: 16px;
+}
+
+.ppo{
+    font-size: 20px;
+    padding-top: 55px;
+}
+
+.affi5 h1{
+    font-size: 28px;
+    color: #01a781;
+    font-weight: 750;
+
+}
+
+.affi5{
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 5%;
+}
+
+.affi5 h2{
+    font-size: 14px;
+    font-weight: 750;
+    color: #01a781;
+}
+
+.affi5 h3{
+    font-size: 26px;
+}
+
+.affi5 h4{
+    font-size: 16px;
+}
+
+.secfour1{
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: #172d3e;
+    padding-bottom: 55px ;
+}
+
+.secfour1 h3{
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+.secfour1 h2{
+    font-size: 24px;
+}
+
+.secfour1 h1{
+    font-size: 14px;
+    font-weight: 750;
+    color: #01a781;
+}
+
+.secfive1{
+    padding-left: 6%;
+    padding-right: 6%;
+}

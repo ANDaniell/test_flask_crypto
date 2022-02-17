@@ -1,0 +1,61 @@
+body {
+    background-color:#102331;
+   
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    min-width: 320px;
+    
+}
+
+
+.selp{
+    padding-top: 100px;
+}
+
+
+.secpol{
+    background-color:#172D3E ;
+
+    padding-bottom: 10px;
+}
+
+.bbb h5{
+    font-size: 14px;
+
+}
+
+.bbb h1{
+   font-size: 22px;
+}
+
+.bbb {
+    background-color: #172D3E;
+}
+
+.bor h1  {
+   font-weight: 1000;
+}
+
+.lastr h3{
+    font-size: 20px;
+    
+}
+
+.lastr h1{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.lastr{
+    background-color: #172D3E;
+}
+
+.nm h1{
+    font-size: 20px;
+    
+}
+
+.nm h4{
+    font-size: 16px;
+}
