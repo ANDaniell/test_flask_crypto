@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<section class="supp">
+    <div class="container supp">
+        <div class="row">
+
+            <h3 style="width: 30%; font-size: 28px; margin-bottom: 0px; padding-bottom: 0px;">Orders</h3>
+
+
+            <a href="{{url_for('additional_blueprint.livetrade')}}" class="suka1">
+                <button type="button but1" class="btn btn-success suka1">Live Trading</button>
+            </a>
+
+            <a href="{{url_for('additional_blueprint.market')}}" class="suka2">
+                <button type="button but2" class="btn btn-outline-success suka2">Wallet</button>
+            </a>
+
+
+            <div class="container jjjs mt-5" style="margin-left: 1em">
+                <div class="row">
+                    <table class="table table12">
+                        <thead>
+                        <tr>
+                            <th scope="col" style="color
+                     : #01a781; font-size: 14px;">Time
+                            </th>
+                            <th scope="col" style="color
+                     : #01a781; font-size: 14px;"> Pair
+                            </th>
+                            <th scope="col" style="color
+                     : #01a781; font-size: 14px;"> Type
+                            </th>
+                            <th scope="col" style="color
+                     : #01a781; font-size: 14px;"> Price
+                            </th>
+                            <th scope="col" style="color
+                     : #01a781; font-size: 14px;"> Amount
+                            </th>
+
+                            <th scope="col" style="color
+                     : #01a781; font-size: 14px;"> Total
+                            </th>
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div class="kolok">
+                        <h5 style="text-align: center; margin-top: 80px; color
+                 : #01a781;">No orders</h5>
+                    </div>
+                </div>
+            </div>
+</section>
+</div>
+
+
+</div>
+</div>
+</section>
+
+{% endblock content %}

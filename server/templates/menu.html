@@ -1,21 +1,108 @@
-<ul class="main_menu">
-{% if current_user.is_authenticated %}
-        <li><a href="{{ url_for('main.index') }}">Главная</a></li>
-        <li><a href="{{ url_for('users.account') }}">Аккаунт</a></li>
-        {% if current_user.is_admin %}
-          <li><a href="{{ url_for('admin.index') }}">Админка</a></li>
-        {% else %}
-        {% endif %}
-       <!-- <li><a href="{{ url_for('users.logout') }}">Выход</a></li> -->
-     <div class="online_status">
-        <div class="online_user"></div>
-        <div class="current_user">
-            <small>{{ current_user.username }}</small>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light " style="background-color: #102331;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('main_blueprint.index') }}">
+            <span class="span1">pamp</span><span class="span2">BIT</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">For Traders</a>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.corporate') }}">Corporate &
+                            Professional</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.fees') }}">Our Fees </a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.security') }}">Security</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.market') }}">Market
+                            statistics</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About Us</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.about') }}">About
+                            BiFinix</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.privacy') }}">Privacy
+                            policy</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.termofuse') }}">Terms of
+                            use</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">More</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.affiliate') }}">Affiliate
+                            Program</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.smart') }}">S.M.A.R.T.</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.referral') }}">Referral</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Trading Tools</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.exchange') }}">Exchange</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.history') }}">History</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.orders') }}">Orders</a></li>
+
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('additional_blueprint.livetrade') }}">Live trading</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
+                {% if current_user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('additional_blueprint.balance') }}">Balance</a></li>
+
+                {% endif %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Help</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.support') }}">Support</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.faq') }}">F.A.Q.</a></li>
+
+
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style=" color: #01a781;">My
+                        Account</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="{{ url_for('main_blueprint.account') }}">account</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.faq') }}">F.A.Q.</a></li>
+
+
+                    </ul>
+                </li>
+
+
         </div>
-     </div>
-        {% else %}
-        <li><a href="{{ url_for('main.index') }}">Главная</a></li>
-        <li><a href="{{ url_for('main.register') }}">Регистрация</a></li>
-        <li><a href="{{ url_for('main.login') }}">Логин</a></li>
-        {% endif %}
-</ul>
+    </div>
+
+</nav>

@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="form_login">
+    <form action="" method="POST">
+            {{form.hidden_tag()}}
+            <legend class="legend">{{ legend }}</legend>
+            <div class="form-group">
+                {% if form.title.errors %}
+                    <div class = "invalid-feedback">
+                        {% for errors in form.title.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.title(class='form-post-title', placeholder="Title") }}
+                    {{ form.content(class='form-post-title', placeholder="SUM") }}
+
+
+                {% endif %}
+            {{ form.csrf_token }} {{ form.submit(class='btn_log_in') }}
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,272 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<section class="account1">
+    <div class="container account1">
+        <div class="row">
+            <div class="mycontr">
+                <div class="tab-content" id="myTabContent">
+
+                    <!-- personal verif-->
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="container">
+                            <main>
+                                <div class="py-5 text-center">
+
+                                    <h2>Verification process</h2>
+                                    <p class="lead" style="font-size: 16px;">pampBIT has adopted an online verification
+                                        procedure which will require you to complete an online questionnaire and attach
+                                        certain documents as support.</p>
+                                </div>
+
+                                <div class="row g-5">
+                                    <div class="col-md-5 col-lg-4 order-md-last">
+                                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="" style="color: #01a781;">PampBit Code</span>
+
+                                        </h4>
+                                        <ul class="list-group mb-3">
+                                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                                <div>
+                                                    <h6 class="my-0"></h6>
+                                                    {% with messages = get_flashed_messages() %}
+                                                    {% if flag %}
+                                                    <small class="text-muted">Your account code add successfully</small>
+                                                    {% else %}
+                                                    <small class="text-muted">No activated codes</small>
+                                                    {% endif %}
+                                                    {% endwith %}
+                                                </div>
+                                                <span class="text-muted"></span>
+                                            </li>
+
+                                        </ul>
+
+                                        <form action="" method="POST" class="card p-2">
+                                            <div class="input-group">
+                                                {{ form_referral.code(class='form-control', style="background-color:
+                                                #1c3446 ; border-radius: 2px;", placeholder="Enter Promo code") }}
+
+                                                {{ form_referral.csrf_token }} {{ form_referral.submit(class='btn
+                                                btn-secondary') }}
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="col-md-7 col-lg-8">
+                                        <form action="" class="needs-validation was-validated" novalidate="" method="POST">
+                                            {{form_user_data.hidden_tag()}}
+                                        <h4 class="mb-3">Personal information</h4>
+                                            <div class="row g-3">
+                                                <div class="col-sm-6">
+                                                    <label for="firstName" class="form-label">First name</label>
+                                                    <input type="text" class="form-control" id="firstName"
+                                                           placeholder="{{ current_user.username }}" value="{{ current_user.username }}"
+                                                           required="">
+                                                    <div class="invalid-feedback">
+                                                        Valid first name is required.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label for="lastName" class="form-label">Last name</label>
+
+                                                    {{form_user_data.last_name(class="form-control", value=current_user.last_name.data, required="")}}
+                                                    <div class="invalid-feedback">
+                                                        Valid last name is required.
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <label for="email" class="form-label">Email </label>
+                                                    <input type="email" class="form-control" id="email"
+                                                           placeholder="{{ current_user.email.data }}"
+                                                           value="{{ current_user.email.data }}">
+                                                    <div class="invalid-feedback">
+                                                        Please enter a valid email address .
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <label for="username" class="form-label">City</label>
+                                                    <div class="input-group has-validation">
+                                                        {{form_user_data.city(class="form-control",
+                                                               placeholder="London", required="", value=current_user.city.data)}}
+                                                        <div class="invalid-feedback">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Street Address</label>
+                                                    {{form_user_data.address(class='form-control', placeholder="1234 Main St", required="")}}
+                                                    <div class="invalid-feedback">
+                                                        Please enter your address.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <label for="address2" class="form-label">
+                                                        Phone number<span class="text-muted">(Optional)</span></label>
+                                                    {{form_user_data.phone(class="form-control", value=current_user.phone.data)}}
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <label for="country" class="form-label">Country</label>
+                                                    {{form_user_data.country(class="form-control",value=current_user.country.data)}}
+                                                    <div class="invalid-feedback">
+                                                        Please select a valid country.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="state" class="form-label">State</label>
+                                                    {{form_user_data.state(class="form-control",value=current_user.state.data)}}
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid state.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <label for="zip" class="form-label">Zip</label>
+                                                    {{form_user_data.zip(class="form-control" ,value=current_user.zip.data)}}
+                                                    <div class="invalid-feedback">
+                                                        Zip code required.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-4">
+
+                                            <h4 class="mb-3">Security</h4>
+
+
+                                            <div class="row gy-3">
+                                                <div class="col-md-6">
+                                                    <label for="cc-name" class="form-label">Old Password</label>
+                                                    {{form_user_data.old_pass(class="form-control pidoe1",
+                                                           style=" border-color: #172D3E; background-image: none;", value='')}}
+                                                    <small class="text-muted"></small>
+                                                    <div class="invalid-feedback">
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="cc-number" class="form-label">New Password</label>
+                                                    {{form_user_data.password(class="form-control pidoe1",
+                                                           style=" border-color: #172D3E; background-image: none;")}}
+                                                    <div class="invalid-feedback">
+
+                                                    </div>
+                                                </div>
+                                                {{ form_user_data.csrf_token }}
+                                                {{ form_user_data.submit(class='w-100 btn
+                                                btn-primary btn-lg mt-5') }}
+                                        </form>
+                                    </form>
+                                    </div>
+
+                                </div>
+                            </main>
+
+                        </div>
+                    </div>
+                    <!--  end of personal verif -->
+
+                    <!-- Nav -> GENERAL -->
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <section class="exchange" style="margin-top: 0px ;">
+                            <div class="container exchange" style="margin-top: 0px;">
+                                <div class="row">
+
+                                    <div class="container jjjs134 " style="margin-left: 1em; margin-top: 0px;">
+                                        <div class="row">
+                                            <h4 style="text-align: left; font-size: 16px; margin-top: 30px; margin-left: 30px; margin-bottom: 30px;">
+                                                User settings</h4>
+
+                                            <div class="col-xl-6 col-md-6 col-sm-12 ">
+                                                <div class="row">
+                                                    <h4 style="text-align: left; font-size: 16px; margin-top: 10px; margin-left: 30px; margin-bottom: 0px;">
+                                                        Nickname</h4>
+                                                    <input type="text" class="form-control gggg12"
+                                                           style="width: 45%; background-color: aliceblue; margin-left: 40px ; margin-top: 30px; margin-right: 5px;">
+                                                    <button style="width: 100px; margin-top: 30px; margin-left: 0px; background-color: #01a781; border: 0px; border-radius: 3px; height: 40px; color: whitesmoke">
+                                                        Change
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 col-sm-12 ">
+                                                <div class="row">
+                                                    <h4 style="text-align: left; font-size: 16px; margin-top: 10px; margin-left: 40px; margin-bottom: 0px;">
+                                                        Automatic logout time</h4>
+                                                    <select class="form-control gggg12"
+                                                            style="width: 45%; background-color: aliceblue; margin-left: 40px ; margin-top: 30px; margin-right: 5px;">
+                                                        <option value="other">Never</option>
+                                                        <option value="deposit">7 days</option>
+                                                        <option value="withdraw">1 day</option>
+                                                        <option value="trade_balance">8 hours</option>
+                                                        <option value="report">1 hour</option>
+                                                        <option value="r131">30 min</option>
+                                                    </select>
+                                                    <button style="width: 100px; margin-top: 30px; margin-left: 0px; background-color: #01a781; border: 0px; border-radius: 3px; height: 40px; color: whitesmoke">
+                                                        Change
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- end of general-->
+
+                    <!-- Security  -->
+
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">.3..
+
+                    </div>
+                    <!--  end of Security  -->
+
+
+                    <!-- API Keys-->
+                    <div class="tab-pane fade" id="api" role="tabpanel" aria-labelledby="contact-tab">
+                        <section class="supp1">
+                            <div class="container supp3">
+                                <div class="row">
+
+                                    <h4 style="width: 30%; font-size: 20px; margin-bottom: 0px; padding-bottom: 0px; margin-top: 0;">
+                                        API Keys</h4>
+
+                                    <button type="button" class="btn btn-primary syka3" disabled data-bs-toggle="button"
+                                            autocomplete="off" style="max-width: 90px;">
+                                        Generate new key
+                                    </button>
+
+                                    <hr style="height: 1px; margin-top: 20px; ">
+
+                                    <h5 style="color: #d1515b;">Please, enable Two-Factor authentication</h5>
+                        </section>
+                    </div>
+                    <!-- end of API Keys-->
+
+                    <!-- Refferal programm-->
+                    <div class="tab-pane fade" id="reff" role="tabpanel" aria-labelledby="contact-tab">.5..</div>
+
+                    <!-- END OF Refferal programm-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+{% endblock content %}

@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<section class="reff">
+    <div class="container reff">
+          <div class="row">
+        <div class="col-xl-6 col-md-6 col-sm-12 cls ">
+            <h1>Friends Trade Together</h1>
+            <h3>Invite friends to pampBIT. Send them your referral link. They register by your link and start trading. Now you get a reward of 40% from friend's trade fees.</h3>
+            <a href="{{url_for('main_blueprint.login')}}"><button type="button but1" class="btn btn-success">GET YOUR LINK </button></a>
+            <a href="{{url_for('additional_blueprint.smart')}}"><button  type="button but2" class="btn btn-outline-success">S.M.A.R.T. *</button></a>
+            <h4>* S.M.A.R.T. is special investment plans</h4>
+                       
+       
+        </div>
+        <div class="col-xl-6 col-md-6 col-sm-12 cls ">
+            <img src="{{ url_for('static', filename='img/referral.png')}}" style="width:300px; padding-top: 50px;">
+        </div>
+      
+              
+        </div>
+    </div>
+</section>
+
+
+<section class="reff2">
+    <div class="container reff2">
+        <div class="row">
+            <h1>pampBit Referral Program</h1>
+            <div class="accordion acord1" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is pampBIT Referral Program?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <h2>pampBIT Referral Program is an opportunity to make money with your friends!
+                        Referral - a member of the affiliate program, registered by the recommendation of another member.</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How does the pampBit Referral Program work?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    <h2>- Tell your friends about us;
+                        </h2> 
+                        <h2> - They need to register by your referral link;</h2>
+                        <h2>- You will receive 40% of the amount of fees paid by them;</h2>
+                        <h2>- Your trade commission will be 0.1%.</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How to become a member of pampBit Referral Program?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                  <h2>Select the “Referral Program” section In your account. Here you can find the information about your referrals (invited users). Your personal referral link is also displayed here.</h2>  
+                  <h2>To invite a new referral, just share this link (by copying it or making a repost in the social media). After your referral registers with your link, information about it will be displayed in the “Details about referrals” section (your referrals).</h2>
+                  <h2>Congratulations! You have become a member of the pampBit Referral Program. Now you will receive a 40% cashback from the fee paid for each transaction made by your referral!</h2>
+                  </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

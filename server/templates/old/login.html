@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="form_login">
+    <form action="" method="POST">
+            <legend class="legend">{{ legend }}</legend>
+
+            <div class="form-group">
+                {% if form_login.email.errors %}
+                    {{ form_login.email(class = 'is-invalid', placeholder = 'Email') }}
+                    <div class = "invalid-feedback">
+                        {% for errors in form_login.email.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form_login.email(class='form-post-title', placeholder="Емайл") }}
+                {% endif %}
+            </div>
+            {{ form_login.password(class='form-post-title', placeholder='Password') }}
+            <div class = "invalid-feedback">
+                {% for errors in form_login.password.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+            </div>
+            <div class="form-check">
+                 {{ form_login.remember(class='form-check-input') }}
+                 {{ form_login.remember.label(class='form-check-label') }}
+            </div>
+        </fieldset>
+        <div class="form-group_button">
+           <div class="btn"> {{ form_login.csrf_token }} {{ form_login.submit(class='btn_log_in') }}</div>
+            <div class="border-top pt-2">
+    <small class="text-muted">
+        <a class='ml-2' href="{{ url_for('main_blueprint.register')}}"> Нужен аккаунт?</a>
+    </small>
+
+    </form>
+</div>
+{% endblock %}

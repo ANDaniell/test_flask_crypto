@@ -1,0 +1,147 @@
+{% extends 'layout.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylec.css')}}">
+{% endblock style %}
+
+
+{% block content %}
+
+
+<section class="selp">
+    <div class="container selp">
+        <div class="row">
+            <div class="col-xl-6 col-md-6 col-sm-12" style="margin-top: 120px;">
+                <h1 style="font-size: 14px; font-weight: 600; color: #01a781;"> SECURITY</h1>
+                <h2 style="font-size: 50px;">Your security is our</h2>
+                <h2 style="font-size: 50px;">priority</h2>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <div class="pict"><img src="{{ url_for('static', filename='img/security-policy.png')}}" width="500"
+                                       height="220"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="secpol">
+    <div class="container secpol">
+        <div class="row">
+            <div class="col-xl-6 col-md-6 col-sm-12 ">
+                <h1 style="color:#01a781; font-size: 30px; font-weight: 650;">Security policies</h1>
+                <h4 class="mb-5">Security of funds and user information is our top priority.</h1>
+                    <h4>Our security team is continually improving our end-to-end security measures, improving auditing
+                        processes, and reducing the 'attack surface' of our infrastructure. Please note that we cannot
+                        disclose too many details of the security measures implemented on the platform for security and
+                        proprietary reasons.</h1>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12 ">
+                <div class="pict"><img src="{{ url_for('static', filename='img/bitfinex-security.png')}}" width=""
+                                       height="50"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bbb">
+    <div class="container bbb">
+        <div class="row">
+            <h1 class="mb-3" style="color: #01a781; font-weight: 700; font-size: 30px;">User account protection</h1>
+            <h4 class="mb-5" style="font-size: 20px;">Some of the security measures highlighted below are in place by
+                default, and others can be activated based on the security level you need. Please
+                visithttps://www.pampBit.com/securityto check the security status of your account and see
+                recommendations.</h4>
+            <div class="col-xl-4 col-md-6 col-sm-12 bor">
+                <h1>Two-factor authentication (2FA)</h1>
+                <h5>Add an extra layer of security to your account and protect sensitive operations such as logging in,
+                    generating API keys, and withdrawing. Configure two-factor authentication using Google
+                    Authenticator, or a U2F Security Key.</h5>
+
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12 bor ">
+                <h1>Universal 2nd factor (U2F)</h1>
+                <h5>Use a physical Security Key to take advantage of the ultra-secure FIDO Universal 2nd Factor (U2F)
+                    open authentication standard.</h5>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12 bor ">
+                <h1>Advanced API key permissions
+                </h1>
+                <h5>Create API keys with advanced read/write permissions on a per-feature basis. Unleash the full power
+                    of the platform through our REST and WebSockets APIs.</h5>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12 bor ">
+                <h1>Advanced verification tools</h1>
+                <h5>Login data is saved and analyzed for unusual activity.
+                    Intelligent system detects IP Address changes to prevent session hijacking.
+                    Email notifications report logins and include a link to instantly freeze your account if you suspect
+                    malicious activity.
+                    Limit access to your account based on IP address.</h5>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12 bor ">
+                <h1>Withdrawals protection</h1>
+                <h5>Security system monitors withdrawals by IP address and other user behavior patterns, triggering
+                    manual admin inspection on withdrawals that appear unusual.
+                    Withdrawal confirmation step that is immune to malicious browser malware.
+                    Define an address whitelist to ensure no withdrawals can go anywhere else.</h5>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12 bor ">
+                <h1>Email encryption with OpenPGP</h1>
+                <h5>Want more protection? Encrypted email communication (PGP) adds an extra layer of privacy and
+                    security.</h5>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="lastr">
+    <div class="container lastr">
+        <div class="row">
+            <h1 class="mb-4" style="color: #01a781;">Cryptocurrency storage</h1>
+            <h3 class="mb-5">The overwhelming majority of system funds are stored in offline, multi-signature cold
+                wallets. Only approximately 0.5% of crypto assets are accessible in hot wallets for day-to-day platform
+                operation. As an added protection, the cold wallets are not available from the platform or the platform
+                servers.</h3>
+            <h3 class="mt-5" style="color: #01a781; font-size: 30px; font-weight: 700;">System security</h3>
+
+            <div class="col-xl-4 col-md-4 col-sm-12 nm">
+                <h1>Always up-to-date Linux systems to host the platform</h1>
+                <h4>We are protected by automatic Distributed Denial of Service protection to prevent trading to be
+                    halted by outside attacks.</h4>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-12 nm">
+                <h1>Automatic real-time backup of the database
+                </h1>
+                <h4>The platform database is backed up in real-time on encrypted hard-drives and is replicated in
+                    several geographical locations.</h4>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-12 nm">
+                <h1>Protection from DDoS attacks</h1>
+                <h4>We are protected by automatic Distributed Denial of Service protection to prevent trading to be
+                    halted by outside attacks.</h4>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="secfive" style="background-color: #102331;">
+    <div class="container five">
+        <div class="row">
+            <link rel="stylesheet" href="css/style.css">
+            <div class="col-xl-6 col-md-6 col-sm-12 zzz1">
+                <h1>Join pampBit and </h1>
+                <h1>start trading today</h1>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12 zzz ">
+                <div class="ida">
+                    <a href="{{ url_for('main_blueprint.register')}}" class="btn btn-itd btn-lg itd" style="font-size: 18px;">Sing Up</a>
+                    <a href="{{ url_for('main_blueprint.login')}}" class="btn btn-itd btn-lg itd2" style="font-size: 18px;">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

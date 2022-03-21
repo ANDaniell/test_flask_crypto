@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+
+<section class="supp">
+    <div class="container supp">
+        <div class="row">
+            <h3 style="width: 20%; font-size: 28px; margin-bottom: 0px; padding-bottom: 0px;">Support</h3>
+            <button type="button" class="btn btn-primary mmm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                New ticket
+            </button>
+            <!-- Modal -->
+            <form class="regz" action="" method="POST">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"
+                                    style="text-align: center; font-size: 18px;">
+                                    New ticket</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="mb-3 ">
+                                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                                    {{ form.email(class="form-control", placeholder=email_data) }}
+                                    {{ form.hidden_tag() }}
+                                </div>
+                                <div class="mb-3">
+
+                                    <label for="exampleInputPassword1" class="form-label">Category</label>
+                                    {{ form.category(class="form-control") }}
+
+                                </div>
+                                <div class="mb-3 ">
+                                    <label for="exampleInputEmail1" class="form-label">Topic</label>
+                                    {{ form.topic(class="form-control") }}
+                                </div>
+                                <div class="mb-4 ">
+                                    <label for="exampleInputEmail1" class="form-label">Text</label>
+                                    {{ form.text(class="form-control") }}
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                {{ form.csrf_token }}
+                                {{ form.submit(class="btn btn-primary button") }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+            <h4 style="font-size: 16px; margin-top: 30px; background-color: #01a781; padding: 10px; border-radius: 5px;">
+                Your question will not be considered if you are rude, insulting, or ask a question that is not on the
+                topic</h4>
+
+            <section class="jjj mt-4 mb-0" style=" margin-bottom:90px">
+                <div class="container jjjs">
+                    <div class="row">
+                        <table class="table table12">
+                            <thead>
+                            <tr>
+                                <th scope="col" style="color
+                 : #01a781; font-size: 14px;">#
+                                </th>
+                                <th scope="col" style="color
+                 : #01a781; font-size: 14px;">Date
+                                </th>
+                                <th scope="col" style="color
+                 : #01a781; font-size: 14px;">Category
+                                </th>
+                                <th scope="col" style="color
+                 : #01a781; font-size: 14px;">Topic
+                                </th>
+                                <th scope="col" style="color
+                 : #01a781; font-size: 14px;">Status
+                                </th>
+                                <th scope="col" style="color
+                 : #01a781; font-size: 14px;"></th>
+
+                            </tr>
+                            </thead>
+
+                            {% if tickets %}
+
+                            {% for i in tickets %}
+                            <tbody class="body1337">
+                            <tr>
+                                <th style="border-bottom-width: 0px;">{{i[0]}}</th>
+                                <th style="border-bottom-width: 0px;">{{i[1]}}</th>
+                                <th style="border-bottom-width: 0px;">{{i[2]}}</th>
+                                <th style="border-bottom-width: 0px;">{{i[3]}}</th>
+                                <th style="border-bottom-width: 0px;">{{i[4]}}</th>
+                                <th style="border-bottom-width: 0px;"><a href={{url_for('additional_blueprint.comments', user_name = c_id, message_id = i[6], code = i[0])}}>
+                                    <button style="border-radius: 3px; background-color: #01a781; border-color: #01a781; color: whitesmoke; font-weight:50; width: 100%;">
+                                        Show
+                                    </button>
+                                </a></th>
+                            </tr>
+                            </tbody>
+                            {% endfor %}
+                        {% else %}
+                            <tbody class="body1337">
+                            <h5 style="text-align: center; margin-top: 80px; color : #01a781;">No ticket</h5></tbody>
+                        {% endif %}
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock content %}

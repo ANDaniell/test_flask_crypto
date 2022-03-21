@@ -1,69 +1,67 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<div class="registr">
+    <form class="regz" action="" method="POST">
+        <section class="center">
+            <div class="container center">
+                <div class="row aezkmi">
+                    <div class="col-xl-4 col-md-1 col-sm-1 ">
+                    </div>
 
-<div class="register_form sign_in">
-    <form action="" method="POST">
-        {{ form_registration.hidden_tag() }}
-        <legend class="legend">{{ legend }}</legend>
+                    {{ form_registration.hidden_tag() }}
+                    <div class="col-xl-4 col-md-11 col-sm-11 ">
+                        <h2 style="font-weight: 750;" class="mb-4">Sing up</h2>
+                        <form class="regz">
+                            <div class="mb-3 ">
+                                <label for="exampleInputEmail1" class="form-label">Username</label> {{
+                                form_registration.username(class='form-control') }}
 
-        {% if form_registration.username.errors %}
-        {{ form_registration.username(class='form-post-title is-invalid', placeholder='Имя пользователя') }}
-        <div class="invalid-feedback">
-            {% for errors in form_registration.username.errors %}
-            <span>{{ error }}</span>
-            {% endfor %}
-        </div>
-        {% else %}
-        {{ form_registration.username(class='form-post-title', placeholder='Имя пользователя') }}
-        {% endif %}
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                {{ form_registration.email(class='form-control') }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                {{ form_registration.password(class='form-control', type='password') }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword2" class="form-label">Confirm password</label>
+                                {{ form_registration.confirm_password(class='form-control', type='password') }}
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="exampleInputEmail1" class="form-label">Country of residence</label>
+                                {{ form_registration.country(class='form-control') }}
+                            </div>
+                            <div class="mb-4 ">
+                                <label for="exampleInputEmail1" class="form-label">Referral Code</label>
 
-        {% if form_registration.email.errors %}
-        {{ form_registration.email(class='form-post-title is-invalid', placeholder='Емайл') }}
-        <div class="invalid-feedback">
-            {% for errors in form_registration.email.errors %}
-            <span>{{ error }}</span>
-            {% endfor %}
-        </div>
-        {% else %}
-        {{ form_registration.email(class='form-post-title', placeholder='Емайл') }}
-        {% endif %}
+                                {{ form_registration.referral(class='form-control') }}
+                            </div>
+                            <h1 class="conf mb-4">By signing up I confirm I’ve created a strong and unique password not
+                                being used
+                                anywhere else and I agree to the <a href="">terms & conditions</a> and<a href="">
+                                    anti-spam
+                                    policy.</a>
 
-        {% if form_registration.password.errors %}
-        {{ form_registration.password(class='form-post-title is-invalid', placeholder='Пароль') }}
-        <div class="invalid-feedback">
-            {% for errors in form_registration.password.errors %}
-            <span>{{ error }}</span>
-            {% endfor %}
-        </div>
-        {% else %}
-        {{ form_registration.password(class='form-post-title', placeholder='Пароль') }}
-        {% endif %}
+                            </h1>
+                            {{ form_registration.csrf_token }}
+                            {{ form_registration.submit(class='btn btn-primary olx', placeholder='Sing Up') }}
 
-        {% if form_registration.confirm_password.errors %}
-        {{ form_registration.confirm_password(class='form-post-title is-invalid', placeholder='Подтвердите пароль') }}
-        <div class="invalid-feedback">
-            {% for errors in form_registration.confirm_password.errors %}
-            <span>{{ error }}</span>
-            {% endfor %}
-        </div>
-        {% else %}
-        {{ form_registration.confirm_password(class='form-post-title', placeholder='Подтвердите пароль') }}
-        {% endif %}
-        {{ form_registration.role() }}
-        <div class="form-group_button">
-           <div class="btn">
-                {{ form_registration.submit(class='btn_sign_in') }}
-           </div>
-              <small class="text-muted">
-            <a class='ml-2' href="{{ url_for('users.login')}}">Уже есть аккаунт? </a>
-        </small>
-        </div>
+
+                            <h1>This site is protected by hCaptcha and its <a href="">Privacy Policy</a>
+                                and <a href="">Terms of Service</a> apply.</h1>
+                        </form>
+                    </div>
+                    <div class="col-xl-4 col-md-1 col-sm-1 ">
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </form>
-    <div class="border-top">
-    </div>
 </div>
-
-
-
-{% endblock content%}
+{% endblock content %}

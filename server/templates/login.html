@@ -1,42 +1,59 @@
 {% extends 'layout.html' %}
-
 {% block content %}
+<section class="logining">
 
-<div class="logiform_loginrm log_in">
-    <form action="" method="POST">
-            <legend class="legend">{{ legend }}</legend>
+    <div class="container logining">
+        <div class="row">
+            <div class="col-xl-3 col-md-2 col-sm-1 ">
+            </div>
 
-            <div class="form-group">
-                <!--
-                {% if form.email.errors %}
-                    {{ form.email(class = 'is-invalid', placeholder = 'Email') }}
-                    <div class = "invalid-feedback">
-                        {% for errors in form.email.errors %}
-                        <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}-->
-                    {{ form_login.email(class='form-post-title', placeholder="Емайл") }}
-                <!-- {% endif %} -->
-            </div>
-            {{ form_login.password(class='form-post-title', placeholder='Password') }}
-            <div class = "invalid-feedback">
-                <!--
-                {% for errors in form.password.errors %}
-                        <span>{{ error }}</span>
-                        {% endfor %} -->
-            </div>
-            <div class="form-check">
+
+            <div class="col-xl-6 col-md-8 col-sm-11 ">
+                <div class="center1">
+                    <a class="navbar-brand">
+                        <span class="span11"></span><span class="span21"></span>
+                    </a></div>
+                <div class="razmer">
+                    <form action="" class="myform" method="POST">
+                        <h1 class="text-center mb-4" style="font-size: 30px; ;">Login</h1>
+                        <h2 class="text-center" style="font-size: 14px;">
+                            Important!
+                        </h2>
+                        <h2 class="text-center" style="font-size: 14px;">Please check that you are visiting
+                            https://www.pampbit.com</h2>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            {{ form_login.email(class='form-control') }}
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            {{ form_login.password(class='form-control') }}
+
+                        </div>
+                        <div class="center1">
+                            <h1 class="text-left" style="font-style: 14px; text-decoration: none; color: #01a781;">
+                                <a href="" style="font-size: 14px; text-decoration: none; color: #01a781;">Forgot
+                                    Password?</a></h1>
+                            <small class="text-muted">
+                                <a class='ml-2' style="font-size: 14px; text-decoration: none; color: #01a781;"
+                                   href="{{ url_for('main_blueprint.register')}}">
+                                    Need an account?</a></div>
+                        </small>
+                        <div class="form-check">
                  {{ form_login.remember(class='form-check-input') }}
                  {{ form_login.remember.label(class='form-check-label') }}
             </div>
-        </fieldset>
-        <div class="form-group_button">
-           <div class="btn"> {{ form_login.submit(class='btn_log_in') }}</div>
-            <div class="border-top pt-2">
-    <small class="text-muted">
-        <a class='ml-2' href="{{ url_for('main.register')}}"> Нужен аккаунт?</a>
-    </small>
-    </form>
-</div>
-{% endblock %}
+                        {{ form_login.csrf_token }} {{ form_login.submit(class='btn btn-primary') }}
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="col-xl-3 col-md-2 col-sm-1 ">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<section class="supp2" style="padding-top:100px;">
+    <div class="container supp2">
+        <div class="row">
+            <div class="col-xl-4 col-md-4 col-sm-12" style="background-color:#172d3e; width: max; height: auto; border-radius: 5px;
+            ">
+                <div class="top">
+                    <div class="title"
+                         style="font-size: 24px; margin-bottom: 20px; padding-left: 12px; margin-top: 12px;">Ticket
+                        #{{message_data[0]}}
+                    </div>
+                    <hr/>
+                    <div class="row" style="margin-bottom: 8px; font-size: 14px; padding-left: 12px;">Date:
+                        {{message_data[1]}}
+                    </div>
+                    <div class="row" style="margin-bottom: 8px; font-size: 14px; padding-left: 12px;">Email:
+                        {{message_data[2]}}
+                    </div>
+                    <div class="row" style="margin-bottom: 8px; font-size: 14px; padding-left: 12px;">Topic:
+                        {{message_data[4]}}
+                    </div>
+                    <div class="row" style="margin-bottom: 8px; font-size: 14px; padding-left: 12px;">Language:
+                        English
+                    </div>
+                    <div class="row" style="margin-bottom: 8px; font-size: 14px; padding-left: 12px;">Category:
+                        {{message_data[3]}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1 col-md-1 col-sm-0" style="width:auto">
+
+            </div>
+            <div class="col-xl-7 col-md-7 col-sm-12"
+                 style="background-color:#172d3e; width: max; height: auto; border-radius: 5px;">
+                <div class="right">
+                    <div class="top"
+                         style="font-size: 24px; margin-bottom: 20px; padding-left: 12px; margin-top: 12px;">
+                        Comments
+                    </div>
+                    <hr/>
+                    <div class="center ms-lk" style="max-height: max;">
+                        {% if comments_data %}
+                        {% for c in comments_data %}
+                        <div class="message" style=" font-size:14px; width: max; min-height: 100px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-2 col-md-2 col-sm-4" style="font-size:14px; margin-right: 0px;">
+                                        <div>{{c[0]}}</div>
+                                        <div>{{c[3]}}</div>
+                                    </div>
+
+                                    <div class="col-xl-10 col-md-10 col-sm-8">
+                                        <div class="text" style="font-size:14px;">{{c[1]}}</div>
+                                    </div>
+                                </div>
+                                <hr/>
+                            </div>
+                        </div>{% endfor %}
+                    </div>
+
+
+                    {% endif %}
+                    <div class="bottom">
+                        <form action="" method="POST">
+                            {{form.hidden_tag()}}
+                            <div class="input">{{ form.text(style="resize: none;border-radius: 4px;width: 100%; min-height: 100px;", maxlenght="1500")}}</div> <div class="bar">
+
+
+                            <div class="bar">
+                                <div class="button mt-2 mb-2" style="text-align: right;">
+                                    {{ form.csrf_token }} {{ form.submit(class='button', style="border-radius: 5px; background-color: #01a781; border-color: #01a781; color: white; font-weight:50; width: 100%; max-width: 100px; min-height: 40px;") }}
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
