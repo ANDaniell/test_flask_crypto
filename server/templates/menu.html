@@ -89,17 +89,22 @@
 
                     </ul>
                 </li>
+                {% if current_user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" style=" color: #01a781;">My
                         Account</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                        <li><a class="dropdown-item" href="{{ url_for('main_blueprint.account') }}">account</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('main_blueprint.account') }}">Account</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('additional_blueprint.faq') }}">F.A.Q.</a></li>
 
 
                     </ul>
                 </li>
+                {% else %}
+
+
+                {% endif %}
 
 
         </div>

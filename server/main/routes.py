@@ -28,7 +28,7 @@ def login():
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
             # next_page = url_for('main.account')
-            return redirect(next_page) if next_page else redirect(url_for('main_blueprint.account'))
+            return redirect(next_page) if next_page else redirect(url_for('main_blueprint.index'))
         else:
             print('login error')
             flash('Войти не удалось. Пожалуйста, проверьте электронную почту или пароль', 'danger')

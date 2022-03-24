@@ -50,7 +50,7 @@ def balance():
         user_id = db.session.query(User).filter(User.email == current_user.email).first().id
         tag_id = db.session.query(Tag).filter(Tag.user_id == user_id).first()
         if tag_id:
-            price = tag_id.price / get_price('BTC')
+            price = round(tag_id.price / get_price('BTC'), 6)
             a = gen_address(tag_id.id)
             print(a)
 
@@ -118,6 +118,7 @@ def support():
     tickets = []
     if messages:
         for m in messages:
+            #
             gg = int(m.id) * 17 + 4000 + random.randint(0, 127)
             #  2022-03-14 13:05:02.551447
             date = str(m.created_date).split('.')[0]
@@ -167,8 +168,9 @@ def comments(user_name, message_id, code):
                 content = c.content
                 role = c.role
                 c_user = c.user
+                user_e = db.session.query(User).filter(User.id == c_user).first().email
                 print()
-                comments_data.append([date, content, role, c_user])
+                comments_data.append([date, content, role, user_e])
         if form.validate_on_submit():
             # print('message', form.text.data, current_user.id, form.topic.data)
             try:

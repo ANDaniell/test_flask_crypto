@@ -1,11 +1,7 @@
 from flask_admin import Admin
-from flask_admin.contrib.sqla import ModelView
-from flask_login import login_required, current_user
-
 from server.admin.forms import DashBoardView, MyView
 from server.models import User, Tag, Post, Message, Comment
 
-from flask import render_template, request, redirect, url_for
 
 
 def create_admin(app, db):

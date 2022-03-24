@@ -1,13 +1,13 @@
 import os
-
 from bipwallet.utils import *
+
 
 def gen_seed():
     from bipwallet import wallet
-
     # generate 12 word mnemonic seed
     seed = wallet.generate_mnemonic()
     return seed
+
 
 def gen_address(index):
     # Ваша seed фраза
@@ -31,13 +31,10 @@ def gen_address(index):
 
     return address, str(wif)
 
+
 def gen_qr_wallet(address):
     import qrcode as qrcode
     img = qrcode.make(address)
-    folder_path = os.path.abspath(os.path.dirname(__file__)).split('server')[0]+'server\\static\\img\\'
+    folder_path = os.path.abspath(os.path.dirname(__file__)).split('server')[0] + 'server\\static\\img\\'
     img.save(f'{folder_path}{address}.jpg')
     return f'{address}.jpg'
-
-#print(gen_address(0))
-if __name__ == '__main__':
-    print()
